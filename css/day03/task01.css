@@ -1,0 +1,40 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Cambria, "Trebuchet MS", sans-serif;
+    /* 폰트 변경 */
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+span {
+    color: green;
+    /* text-align: right; */
+    /* span 태그는 인라인 요소이다. 
+    인라인 요소의 태그는 컨텐츠의 크기와 일치한다.
+    딱 맞는 칸에 들어간 요소가 정렬될 수 없다.
+    인라인 요소는 text-align이 불가능하다*/
+}
+
+div {
+    background-color: black;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    /* 색상을 변경할 때 단순히 색의 이름만 사용하는 것이 아니라
+    16진수나 rgb값도 사용가능하다.
+    rgba(0, 0, 0, 0)은 투명도를 설정할 수 있다 */
+    /* 좌측에 네모박스를 눌러 눈으로 보고 선택도 가능하다.
+    크롬 웹스토어에서 color Zilla 확장프로그램을 설치해서 사용 할 수 있다. */
+}
+
+.phone-number {
+    font-size:  35px;
+    background-color: antiquewhite;
+    font-weight: bold;
+}
+
+.my-list {
+    list-style-type: none;
+    /* list-style-type 속성은 리스트 앞에 표현하는 도형이나 숫자들의 모양을 설정한다. */
+}

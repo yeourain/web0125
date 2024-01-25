@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task01</title>
+</head>
+<body>
+    <h1>간단한 양식 예제</h1>
+    <main>
+        <form action="" method="">
+            <fieldset>
+                <legend>개인 정보 입력</legend>
+
+                <label for="name">이름 : </label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <label for="email">이메일 : </label>
+                <input type="text" id="email" name="email" required>
+                <br><br>
+
+                <label for="password">비밀번호 : </label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+
+                <label for="gender">성별 : </label>
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="male">남성</label>
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="female">여성</label>
+                <br><br>
+
+                <label for="country">국가 : </label>
+                <select name="country" id="country">
+                    <option value="kr">대한민국</option>
+                    <option value="us">미국</option>
+                    <option value="jp">일본</option>
+                    <option value="cn">중국</option>
+                </select>
+                <br><br>
+
+                <label for="bio">자기소개 : </label><br>
+                <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+                <br><br>
+
+                <button type="submit">제출</button>
+                <button type="reset">다시시작</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

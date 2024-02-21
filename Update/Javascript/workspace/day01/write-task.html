@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+    실습
+    hr태그 ------------------------------------
+    나의 이름은 000이고 나이는 0살이고, 만나이는 0살입니다
+    write1.html 참고해서 작성
+    --></body>
+    <script>
+        with (document) {
+            write("<h2>실습</h2>");
+            write("<hr>");
+            // write("나의 이름은 김영선이고, 나이는 20살, 만 나이는 " + (20-1) + "살입니다");
+            write(`나이는 20살 만나이는 ${20 - 1}살입니다.`);
+        }
+    </script>
+</html>

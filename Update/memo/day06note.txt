@@ -1,0 +1,46 @@
+day06
+복습 -> position -> 고급선택자 -> 가상선택자
+
+0. 복습
+flex box 
+    레이아웃을 만들 때 사용하는 속성
+
+구성요소
+    flex container
+    flex item
+    주축(main axis)
+    교차축(cross axis)
+
+flex-item 속성
+    배치하는 각각의 자식 요소의 순서, 크기 등의 속성 지정
+    flex
+    flex-grow
+    flex-shrink
+    flex-basis
+
+시맨틱 태그
+    태그 자체적으로 의미가 있는 태그
+
+1. position
+    HTML 요소를 배치하는 속성
+
+static      position 속성의 기본값, 일반적으로 흐름으로 배치된다
+relative    static 동일하게 배치됨
+            현재 사진의 위치를 기준으로 배치를 변경할 수 있다
+            top right bottom left 속성을 사용한다
+absolute    일반적으로 흐름과 무관하게 배치할 수 있다
+            position : static이 아닌 부모 요소를 기준으로 배치한다
+            만약 조상 요소 중 static이 아닌 요소가 없다면 body를 기준으로 배치한다
+fixed
+            브라우저 화면상으로 보이는 영역(viewport)에 고정되도록 배치한다
+            즉, 스크롤을 하여도 고정된다
+sticky
+            처음에는 일반적인 흐름에 배치되고 스크롤이 특정 위치에 도달하면 fixed처럼 화면에 고정된다
+            ※ 주의사항 :  부모 요소에 height가 지정되어있어야만 작동한다!!
+        
+position과 관련된 속성
+z-index
+    요소가 배치될 때 겹치게 된다면 어떤 요소가 위로 올라올지 순서를 정하는 속성
+    기본값은 auto
+    지정하는 값은 1,10, 100, -1, -10, -100 등의 숫자를 사용한다
+    숫자가 높을수록 요소가 앞으로 나오게 된다

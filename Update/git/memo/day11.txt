@@ -1,0 +1,68 @@
+day11
+복습 -> pull, push -> 브랜치 -> GUI
+
+0.복습
+Git과 Git-Hub
+   Git    분산형 버전관리시스템
+      커맨드라인도구로 git 모든 기능을 사용할 수 있으며
+      GUI 클라이언트 제공되고있음
+
+   GitHub   Git기반의 웹 호스팅 플랫폼
+      git 레포지토리를 호스팅하고 웹 인터페이스를 통해 프로젝트를 관리하고 협업할 수 있게함
+   
+   => Git은 소스코드의 버전관리를 위한 분산형 버전관리시스템
+   GitHub는 Git 레포지토리를 호스팅하고 협업을 지원하는 웹 플랫폼입니다
+   
+Git 구조
+   3가지 영역으로 나뉘며 각 영역에 순차적으로 파일을 올려줘야한다
+
+1) Working Directory(작업폴더, 깃 저장소)
+   설정하게 되면 해당 폴더에 .git 폴더가 생긴다
+   - 파일의 상태
+   git의 관리대상이 아니다
+   관리대상이 아닌 파일을 untracked 상태
+
+2) Staging Area(스테이징 영역)
+   git의 관리 대상이다
+   - 파일의 상태
+   관리 대상 파일 tracked(추적)상태
+      unmodified : 수정이 되지 않은 상태
+      modified : 스테이징 영역에 들어온 파일 중 수정된 상태
+      staged : 로컬 저장소에 올릴 준비가 완료된 상태
+
+3) Local Repository(로컬 저장소)
+   스테이징 영역에서 staged 상태의 파일을 commit하면 로컬저장소에 저장된다
+   
+Git 명령어
+git config --global user.name "git-hub 이름"
+git config --global user.email "이메일@주소"
+
+git config --list   설정내용 확인
+git init      현재 폴더 내 .git 숨김파일 생성
+         현재 위치의 폴더를 working direcory(깃 저장소)로 만든다
+
+git status      깃 저장소에 있는 파일들의 상태 확인
+
+git add 파일명       작업폴더의 파일을 스테이징 시킨다
+         수정된 파일은 staged 상태로 만들기위해 사용한다
+
+git rm --cached 파일명   add로 스테이징 시킨 파일을 스테이징 영역에서 내보낸다
+
+git commit -m "메세지"   스테이징 영역의 파일들의 변경사항을 확정짓고 새로운 버전을 로컬 저장소에 저장한다
+
+git commit --amend   방금전에 커밋한 메세지를 수정하는 명령어(vim 편집기)
+   일반모드 -> 기본 상태
+      i or a 편집모드 변경
+      esc + : 명령모드 변경
+   명령모드 -> esc : w q
+   입력모드 -> 수정 내용을 작성할 수 있다(하단에 INSERT)
+      i, a, o
+
+git branch         현재 로컬의 브런치를 확인(git-hub 브런치가 main)
+git branch -m master main   현재 로컬의 브런치 master인 경우 main으로 변경
+git branch -D         브런치를 삭제한다
+
+git remote add 원격저장소이름(origin) 주소(git-hub url 복붙)
+   원격 저장소를 로컬과 연결하는 명령어
+git remote -v
+   원격 저장소와 로컬저장소가 연결이 잘 되었는지 확인

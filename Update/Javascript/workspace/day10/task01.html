@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>이벤트 핸들러</title>
+        <style>
+            button {
+                font-size: 20px;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="myButton">클릭 또는 마우스를 올려보세요!</button>
+    </body>
+    <script>
+        const button = document.getElementById("myButton");
+
+        //버튼 클릭 이벤트 핸들러
+        button.addEventListener("click", function () {
+            if (button.textContent === "클릭 또는 마우스를 올려보세요!") {
+                button.textContent = "버튼이 클릭되었습니다";
+            } else {
+                button.textContent = "클릭 또는 마우스를 올려보세요!";
+            }
+        });
+
+        //마우스 올리기 이벤트 핸들러
+        button.addEventListener("mouseover", function () {
+            button.style.backgroundColor = "lightblue";
+            button.textContent = "마우스가 버튼 위에 있습니다";
+        });
+
+        //버튼에서 마우스 벗어났을때 이벤트 핸들러
+        button /
+            addEventListener("mouseout", function () {
+                button.style.backgroundColor = "";
+                button.textContent = "클릭 또는 마우스를 올려보세요!";
+            });
+    </script>
+</html>

@@ -1,0 +1,97 @@
+day05
+복습 -> flex box -> semantic 태그
+
+0. 복습
+display 속성
+   HTML 에서 요소를 어떻게 표시할 지 결정한다
+   블록요소 => display : block
+   인라인요소 => display : inline
+   
+none   : 요소를 보이지 않게 설정한다
+block   : 블록요소로 설정한다
+inline   : 인라인요소로 설정한다
+inline-block : 인라인 블록요소 설정한다
+   인라인처럼 컨텐츠만큼의 영역을 차지하지만
+   블록처럼 컨텐츠의 너비, 높이를 변경할 수 있다
+   내부 block요소, 외부 inline 요소의 특징을 갖는다
+
+1. flex box
+
+레이아웃을 만들 때 사용하는 속성
+float
+display의 flex box
+grid
+   
+flexbox
+   레이아웃을 만드는 하나의 방식이다
+   복잡하지 않게 유연하게 요소들의 크기와 순서를 정하여 배치할 수 있다
+
+flex box 구성
+flex container
+   레이아웃을 적용하여 배치하려는 요소들을 감싸고 있는 부모요소
+flex item
+   실질적으로 배치하려는 요소이며 flex container의 자식요소이다
+   자식요소인 flex item은 여러개 만들 수 있다
+주축(main axis)
+   자식요소가 배치되는 방향
+교차축(cross axis)
+   주축을 가로지르는 방향
+
+flex container 만들기
+   컨테이너로 사용할 부모 요소에 display : flex 속성을 지정한다
+
+flex container의 주요 속성
+   배치하려는 요소들의 전체흐름, 정렬과 관련된 속성
+display
+display: flex
+   flex container를 지정하는 속성
+
+flex-direction
+flex-direction : row | column;
+   주축의 방향을 지정하는 속성
+   row => 행 방향
+   column => 열 방향
+
+justify-content
+   컨텐이너 주축을 기준으로 아이템들을 정렬한다
+   center   중앙정렬
+   space-between   첫아이템과 마지막 아이템을 컨테이너 영역의 양 끝에 배치하고
+         나머지 아이템들은 동일한 간격으로 정렬된다
+         마진이 없으면 완전히 끝으로 붙는다
+   space-around   모든 아이템을 동일한 간격으로 정렬한다
+
+align-itmes
+   컨테이너의 교차축을 기준으로 정렬한다
+   center
+   space-between
+   space-around
+
+flex-wrap
+   컨테이너 내부의 요소들이 많거나 크기가 커서 컨테이너를 넘어가게 되었을 때
+   한줄로 보여줄것인지, 여러줄로 보여줄것인지 지정한다
+   nowrap :flex-wrap의 기본값, 줄바꿈을 하지 않고 한줄로 보여준다
+      만약 컨테이너의 크기가 작다면 각각의 아이템의 크기가 줄어든다
+   wrap   : 컨테이너의 크기가 작다면 여러줄로 보여준다
+
+flex item의 속성
+   배치하는 각각의 자식 요소의 순서, 크기 등의 속성 지정
+   
+   flex
+   flex-grow        아이템이 남은 공간을 얼마나 확장할 수 있는지 나타냄
+                    값이 클수록 남은 공간을 더 많이 차지함
+   flex-shrink      아이템이 공간부족할 때 얼마나 축소될 수 있는지 나타냄
+                    값이 클수록 더 많이 축소함
+   flex-basis       아이템의 초기 크기를 설정함
+                    아이템의 크기를 결정하는 기본값으로 사용됨(단위 px, %)
+                    등등 있으나 활용도가 높지 않다
+
+2. semantic 태그
+    태그 자체적으로 의미가 있는 태그
+
+시멘틱테그의 종류
+    <header>    페이지의 헤더 영역, 최상단에 위치함
+    <footer>    회사 정보등을 담은 푸터 영역, 최하단에 위치함
+    <nav>       다른 페이지로 이동하는 요소를 담은 네비게이션 영역
+    <aside>     주 내용과는 연관성이 낮은 분리된 영역, 주로 사이드바로 사용
+    <section>   컨텐츠간의 영역을 나눌 때 사용
+    <article>   독립되고 반복적으로 재사용가능한 컨텐츠 영역

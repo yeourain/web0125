@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=, initial-scale=1.0" />
+        <title>confirm() 확인창 띄우기</title>
+    </head>
+    <body>
+        <script>
+            /* 계속하시겠습니까?
+            확인 : 000님이 확인을 눌렀습니다
+            취소 : 000님이 취소를 눌렀습니다 */
+            const userName = prompt("이름 입력하세요", "000");
+            const userConfirmed = confirm("계속하시겠습니까?");
+
+            if (userConfirmed) {
+                alert(`${userName}님이 확인을 눌렀습니다`);
+            } else {
+                alert(`${userName}님이 취소를 눌렀습니다`);
+            }
+        </script>
+    </body>
+</html>

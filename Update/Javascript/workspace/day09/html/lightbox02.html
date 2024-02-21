@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>라이트 박스1</title>
+        <link rel="stylesheet" href="./../css/lightbox01.css" />
+        <script defer src="./../javascript/lightbox02.js"></script>
+    </head>
+    <body>
+        <main>
+            <!-- img 태그가 없다면, data 속성을 활용한다
+            data-src 속성을 활용하면 된다
+            data 속성은 'data-'로 시작한다.
+            개발자가 필요한 데이터를 저장하는 속성이다 -->
+            <div class="img-box">
+                <button type="button" data-src="./../img/도시.jpg">
+                    이미지1
+                </button>
+            </div>
+            <div class="img-box">
+                <button type="button" data-src="./../img/바다.jpg">
+                    이미지2
+                </button>
+            </div>
+            <div class="img-box">
+                <button type="button" data-src="./../img/산.jpg">
+                    이미지3
+                </button>
+            </div>
+            <div class="img-box">
+                <button type="button" data-src="">이미지4</button>
+            </div>
+            <div class="img-box">
+                <button type="button" data-src="">이미지5</button>
+            </div>
+            <div class="big-img-wrap">
+                <div class="big-img-box">
+                    <img src="" alt="" class="big-img" />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
